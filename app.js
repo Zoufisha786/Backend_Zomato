@@ -1,5 +1,5 @@
 const express = require('express');
-const mongo = require('mongoose')
+const mongo = require('mongoose');
 const body = require('body-parser');
 const route = require('./Routes/index');
 const bodyParser = require('body-parser');
@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 2020;
 const host = '0.0.0.0';
 const cors = require('cors');
-const mongoUrl = process.env.MONGO_URL
+const mongoUrl = process.env.MONGO_URL;
 
 app.use(cors());
 app.use(express.json());
@@ -21,7 +21,8 @@ mongo.connect(mongoUrl,{ useNewUrlParser: true },{ useUnifiedTopology: true }).t
     }
 ).catch(
     () =>{
-        document.write("Error their");
+        // document.write("Error their");
+        console.log("Error ");
     }
 )
 
