@@ -1,3 +1,16 @@
+// const mongo = require('mongoose');
+// const Schema = mongo.Schema;
+// const locationSchema = Schema({
+//         name: {
+//             type: String,
+//             required :true
+//         },
+//         rno: {
+//             type: Number,
+//             required :true
+//         }
+// });
+// module.exports = mongo.model('Student',locationSchema,'Students');
 const mongo = require('mongoose');
 const Schema = mongo.Schema;
 const locationSchema = Schema({
@@ -5,9 +18,19 @@ const locationSchema = Schema({
             type: String,
             required :true
         },
-        rno: {
+        location_id: {
             type: Number,
+            required :true
+        },
+        city:
+        {
+            type:String,
+            required :true
+        },
+        country_name:
+        {
+            type:String,
             required :true
         }
 });
-module.exports = mongo.model('Student',locationSchema,'Students');
+module.exports = mongo.model('Location',locationSchema,'Locations');
